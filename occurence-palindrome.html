@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  let name = "Hello sir how are you at your level I am good bob";
+  function countPalin(name) {
+    let arr = [];
+    nameSplit = name.split(" ");
+
+    for (let j = 0; j < nameSplit.length; j++) {
+      let temp = nameSplit[j];
+
+      checkPalindrome(temp);
+
+      function checkPalindrome(temp) {
+        let lowerName = temp.toLowerCase();
+        let holdReverse = "";
+        for (let i = lowerName.length - 1; i >= 0; i--) {
+          holdReverse += lowerName[i];
+          console.log("@SN ", holdReverse);
+        }
+        if (lowerName === holdReverse) {
+          arr.push(lowerName);
+          return true;
+        }
+        return false;
+      }
+    }
+    return arr;
+  }
+  console.log(countPalin(name));
+</script>
